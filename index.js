@@ -6,7 +6,7 @@ add.addEventListener("click", getAndUpdate);
 //when we first add data in the list, getAndUpdate function is called.
 function getAndUpdate() {
     if (document.getElementById("title").value.length == 0) {
-        alert("Title can't be empty!")
+        alert("Whoops! Title can't be empty!")
 
     } else if (confirm(`${document.getElementById('title').value} will be added in queue.`)) {
         console.log("Updating List...");
@@ -84,7 +84,7 @@ function update() {
 function deleted(itemIndex) {
     // console.log("Delete", itemIndex);
 
-    if (confirm("Task will be removed from queue.")) {
+    if (confirm("Done and dusted! Task will be removed from queue.")) {
         itemJsonArrayStr = localStorage.getItem('itemsJson')
         itemJsonArray = JSON.parse(itemJsonArrayStr);
         // Delete itemIndex element from the array
